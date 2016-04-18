@@ -112,7 +112,7 @@ class Bot extends EventEmitter {
     }
   }
 
-  _verify (req, res) {
+  verify (req, res) {
     let query = qs.parse(url.parse(req.url).query)
 
     if (query['hub.verify_token'] === this.verify_token) {
