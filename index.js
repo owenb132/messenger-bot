@@ -112,15 +112,19 @@ class Bot extends EventEmitter {
     }
   }
 
-  _verify (req, res) {
-    let query = qs.parse(url.parse(req.url).query)
-
-    if (query['hub.verify_token'] === this.verify_token) {
-      return res.end(query['hub.challenge'])
-    }
-
-    return res.end('Error, wrong validation token')
-  }
+-  verify (token) {
+ -    return (req, res) => {
+ -      if (req.method === 'GET') {
+ -        let query = qs.parse(url.parse(req.url).query)
+ -
+ -        if (query['hub.verify_token'] === token) {
+ -          return res.end(query['hub.challenge'])
+ -        }
+ -
+ -        return res.end('Error, wrong validation token')
+ -      }
+ -    }
+ -  }
 
   _handleEvent (type, event) {
     this.emit(type, event, this.sendMessage.bind(this, event.sender.id))
