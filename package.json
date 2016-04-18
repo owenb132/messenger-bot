@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/remixz/messenger-bot.git"
+    "url": "git+https://github.com/owenb132/messenger-bot.git"
   },
   "keywords": [
     "messenger",
@@ -20,9 +20,9 @@
   "author": "Zach Bruggeman <mail@bruggie.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/remixz/messenger-bot/issues"
+    "url": "https://github.com/owenb132/messenger-bot/issues"
   },
-  "homepage": "https://github.com/remixz/messenger-bot#readme",
+  "homepage": "https://github.com/owenb132/messenger-bot#readme",
   "dependencies": {
     "request": "^2.71.0"
   },
