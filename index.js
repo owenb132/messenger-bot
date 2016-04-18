@@ -112,7 +112,7 @@ class Bot extends EventEmitter {
     }
   }
 
--  verify (token) {
+-  _verify (token) {
  -    return (req, res) => {
  -      if (req.method === 'GET') {
  -        let query = qs.parse(url.parse(req.url).query)
